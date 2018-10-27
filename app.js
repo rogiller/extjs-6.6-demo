@@ -41,7 +41,7 @@ Ext.application({
         //ES8
 
         //string padding methods
-        console.log('es8-pad'.padStart(10))
+        console.log('es8-pad'.padStart(10));
 
         //async await
         this.sayHello();

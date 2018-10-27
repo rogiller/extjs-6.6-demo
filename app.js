@@ -12,11 +12,7 @@ Ext.application({
         //ES6
 
         //let keyword
-        let materials = [
-            'Hydrogen',
-            'Helium',
-            'Lithium'
-        ];
+        let materials = ['Hydrogen', 'Helium', 'Lithium'];
 
         //arrow functions
         console.log(materials.map(material => material.length));
@@ -34,11 +30,13 @@ Ext.application({
         this.add(1);
         this.add(2,3);
 
+
         //ES7
 
-        //Exponentiation
+        //Exponentiation - can't get this to compile
         // let mathValue = 2 ** 8;
         // console.log(mathValue); //256
+
 
         //ES8
 

@@ -43,9 +43,29 @@ Ext.application({
         //string padding methods
         console.log('es8-pad'.padStart(10))
 
+        //async await
+        this.sayHello();
+
+        //the end
+        console.log('the end');
     },
 
     add: function (x=5, y=10) {
         console.log(x + y);
+    },
+
+    sayHello: async function() {
+        const externalFetchedText = await this.fetchTextByPromise();
+        console.log(`Hello, ${externalFetchedText}`); // Hello, es8
+        console.log('Done with sayHello');
+    },
+
+    fetchTextByPromise: function() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve("es8");
+            }, 2000);
+        });
     }
+
 });

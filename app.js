@@ -49,7 +49,8 @@ Ext.application({
 
         console.group('es7');
 
-        //Exponentiation - can't get this to compile with sencha app build
+        //Exponentiation
+        //NOTE: can't get this to compile with sencha app build
         let mathValue = 2 ** 8;
         console.log(mathValue); //256
 
@@ -64,10 +65,11 @@ Ext.application({
         //string padding methods
         console.log('es8-pad'.padStart(10));
 
+        console.groupEnd();
+
         //async await
         this.sayHello();
 
-        console.groupEnd();
 
         //the end
         console.log('the end');

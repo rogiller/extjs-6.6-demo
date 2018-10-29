@@ -54,6 +54,10 @@ Ext.application({
         let mathValue = 2 ** 8;
         console.log(mathValue); //256
 
+        //new Array.prototype.includes
+        const isLithium = ['Hydrogen', 'Helium', 'Lithium'].includes('Lithium');
+        console.log('Array includes Lithium?: %s', isLithium);
+
         console.groupEnd();
 
 

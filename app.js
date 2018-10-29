@@ -32,9 +32,12 @@ Ext.application({
         materials = 'blah';
         console.log('materials value is now: ' + materials);
 
+        //multi-line string
+        const multiLineStr = `Hello! Welcome to Ext JS 
+                                and multi line strings.`;
         //string interpolation
         const hello = 'Hello (from ES6+)';
-        Ext.Msg.alert(`${hello} Ext JS`, 'Hello! Welcome to Ext JS.');
+        Ext.Msg.alert(`${hello} Ext JS`, multiLineStr);
 
         //default params
         this.add();

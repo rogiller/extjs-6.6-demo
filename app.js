@@ -80,10 +80,12 @@ Ext.application({
 
     },
 
+    //default params
     add: function (x=5, y=10) {
         console.log(x + y);
     },
 
+    //es8 async/await keywords
     sayHello: async function() {
         console.time('sayHello time');
         const externalFetchedText = await this.fetchTextByPromise();

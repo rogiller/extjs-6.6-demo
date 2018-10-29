@@ -9,17 +9,28 @@ Ext.application({
     ],
 
     launch: function () {
+
+        //just some console features
+        console.assert(1 > 2, "1 is not greater than 2");
+        console.info("This is info.");
+        console.warn("This is a warning.");
+        console.error("This is an error.");
+
+        console.group('es6');
+
         //ES6
 
         //let keyword
         let materials = ['Hydrogen', 'Helium', 'Lithium'];
+
+        console.table(materials);
 
         //arrow functions
         console.log(materials.map(material => material.length));
 
         //let re-assign
         materials = 'blah';
-        console.log(materials);
+        console.log('materials value is now: ' + materials);
 
         //string interpolation
         const hello = 'Hello (from ES6+)';
@@ -30,15 +41,25 @@ Ext.application({
         this.add(1);
         this.add(2,3);
 
+        console.groupEnd();
+
+
 
         //ES7
 
-        //Exponentiation - can't get this to compile
-        // let mathValue = 2 ** 8;
-        // console.log(mathValue); //256
+        console.group('es7');
+
+        //Exponentiation - can't get this to compile with sencha app build
+        let mathValue = 2 ** 8;
+        console.log(mathValue); //256
+
+        console.groupEnd();
+
 
 
         //ES8
+
+        console.group('es8');
 
         //string padding methods
         console.log('es8-pad'.padStart(10));
@@ -46,8 +67,11 @@ Ext.application({
         //async await
         this.sayHello();
 
+        console.groupEnd();
+
         //the end
         console.log('the end');
+
     },
 
     add: function (x=5, y=10) {
@@ -55,9 +79,10 @@ Ext.application({
     },
 
     sayHello: async function() {
+        console.time('sayHello time');
         const externalFetchedText = await this.fetchTextByPromise();
         console.log(`Hello, ${externalFetchedText}`); // Hello, es8
-        console.log('Done with sayHello');
+        console.timeEnd('sayHello time');
     },
 
     fetchTextByPromise: function() {

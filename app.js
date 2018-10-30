@@ -21,10 +21,13 @@ Ext.application({
         console.warn("This is a warning.");
         console.error("This is an error.");
 
+        console.log('Today is %s tomorrow is %s', 'Tuesday', 'Wednesday');
+
         //table
         console.table(['Micheal','Kevin','Pam','Dwight', 'Jim']);
 
         console.groupEnd();
+
 
         //ES6
 

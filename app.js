@@ -11,19 +11,27 @@ Ext.application({
     launch: function () {
 
         //just some console features
+
+        console.group('console jazz');
+
         console.assert(1 > 2, "1 is not greater than 2");
+
+        //log levels
         console.info("This is info.");
         console.warn("This is a warning.");
         console.error("This is an error.");
 
-        console.group('es6');
+        //table
+        console.table(['Micheal','Kevin','Pam','Dwight', 'Jim']);
+
+        console.groupEnd();
 
         //ES6
 
+        console.group('es6');
+
         //let keyword
         let materials = ['Hydrogen', 'Helium', 'Lithium'];
-
-        console.table(materials);
 
         //arrow functions
         console.log(materials.map(material => material.length));
@@ -46,14 +54,11 @@ Ext.application({
 
         console.groupEnd();
 
-
-
         //ES7
 
         console.group('es7');
 
-        //Exponentiation
-        //NOTE: can't get this to compile with sencha app build
+        //Exponentiation -- //NOTE: can't get this to compile with sencha app build
         let mathValue = 2 ** 8;
         console.log(mathValue); //256
 
@@ -62,7 +67,6 @@ Ext.application({
         console.log('Array includes Lithium?: %s', isLithium);
 
         console.groupEnd();
-
 
 
         //ES8
@@ -74,12 +78,12 @@ Ext.application({
 
         console.groupEnd();
 
-        //async await
+        //async/await
         this.sayHello();
 
 
         //the end
-        console.log('the end');
+        console.log('THE END');
 
     },
 
